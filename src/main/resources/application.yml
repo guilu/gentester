@@ -2,24 +2,18 @@ spring:
   application:
     name: DBH_ACADEMY
   datasource:
-    url: 'jdbc:h2:mem:BDD_FIREACADEMY;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS BDD_FIREACADEMY'
-    username: sa
-    password:
+    url: jdbc:mysql://${DB_HOSTNAME:localhost}:3306/BDD_FIREFIGHT?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: 'firefight'
+    password: 'firefight'
   jpa:
-    generate-ddl: true
+    generate-ddl: false
     hibernate:
-      ddl-auto: create-drop #change to validate in production mode
-    show-sql: true
-    defer-datasource-initialization: true
-  h2:
-    console:
-      enabled: true
-  data:
-    rest:
-      base-path: /api/v1
+      ddl-auto: validate #change to validate in production mode
+      use-new-id-generator-mappings: false #prevents HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+    show-sql: false
 
 server:
-  port: ${PORT:3001}   # HTTP (Tomcat) port
+  port: ${PORT:3000}   # HTTP (Tomcat) port
 
 logging:
   #  pattern:
@@ -27,5 +21,5 @@ logging:
   level:
     org.springframework.web: WARN
     org.hibernate: INFO
-    com.dbhacademy.firefight: DEBUG
+    com.dbhacademy.firefight: WARN
 

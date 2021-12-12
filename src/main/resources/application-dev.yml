@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: DBH_ACADEMY
+  datasource:
+    url: 'jdbc:h2:mem:BDD_FIREACADEMY;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS BDD_FIREACADEMY'
+    username: sa
+    password:
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop #change to validate in production mode
+    show-sql: true
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+  data:
+    rest:
+      base-path: /api/v1
+
+server:
+  port: ${PORT:3001}   # HTTP (Tomcat) port
+
+logging:
+  #  pattern:
+  #    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
+    com.dbhacademy.firefight: DEBUG
+
