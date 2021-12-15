@@ -11,6 +11,9 @@ spring:
       ddl-auto: validate #change to validate in production mode
       use-new-id-generator-mappings: false #prevents HHH90000014: Found use of deprecated [org.hibernate.id.SequenceHiLoGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
     show-sql: false
+  data:
+    rest:
+      base-path: /api/v1
 
 server:
   port: ${PORT:3000}   # HTTP (Tomcat) port
