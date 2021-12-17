@@ -21,7 +21,6 @@ public class BaseEntity implements Serializable {
 
     @GeneratedValue
     @Id
-    @JsonIgnore
     private Long id;
 
     /**
@@ -41,7 +40,7 @@ public class BaseEntity implements Serializable {
      * @return the id
      */
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(long id) {
