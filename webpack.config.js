@@ -10,6 +10,8 @@ module.exports = {
         path: __dirname,
         filename: './src/main/resources/static/built/bundled.js'
     },
+    plugins: [
+    ],
     module: {
         rules: [
             {
