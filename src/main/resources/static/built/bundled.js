@@ -29928,7 +29928,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_bloque__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/bloque */ "./src/main/js/components/bloque.js");
+/* harmony import */ var _components_bloqueList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/bloqueList */ "./src/main/js/components/bloqueList.js");
+
+
+
+
+var App = function App() {
+  console.log("empezzzamos!");
+};
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_bloqueList__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('react'));
+
+/***/ }),
+
+/***/ "./src/main/js/components/bloque.js":
+/*!******************************************!*\
+  !*** ./src/main/js/components/bloque.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Bloque = function Bloque(_ref) {
+  var texto = _ref.texto;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    key: texto,
+    className: "list-group-item"
+  }, texto);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Bloque);
+
+/***/ }),
+
+/***/ "./src/main/js/components/bloqueList.js":
+/*!**********************************************!*\
+  !*** ./src/main/js/components/bloqueList.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _bloque__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bloque */ "./src/main/js/components/bloque.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -29944,8 +29993,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
-var App = function App() {
+var bloqueList = function bloqueList() {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(null),
       _useState2 = _slicedToArray(_useState, 2),
       error = _useState2[0],
@@ -29981,38 +30029,18 @@ var App = function App() {
   } else if (!isLoaded) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...");
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, bloques.map(function (bloque) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_bloque__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        key: bloque.id,
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      className: "list-group"
+    }, bloques.map(function (bloque) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_bloque__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        key: bloque.texto,
         texto: bloque.texto
       });
     }));
   }
 };
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('react'));
-
-/***/ }),
-
-/***/ "./src/main/js/components/bloque.js":
-/*!******************************************!*\
-  !*** ./src/main/js/components/bloque.js ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var Bloque = function Bloque(_ref) {
-  var texto = _ref.texto;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, texto);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Bloque);
+/* harmony default export */ __webpack_exports__["default"] = (bloqueList);
 
 /***/ })
 

@@ -1,5 +1,9 @@
 html {
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 50px
 }
 
 table {
