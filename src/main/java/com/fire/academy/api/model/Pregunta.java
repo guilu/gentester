@@ -1,4 +1,5 @@
 package com.fire.academy.api.model;
+import java.util.Collections;
 import java.util.List;
 
 import javax.persistence.*;

@@ -57,24 +57,6 @@ public class Tema extends BaseEntity {
     }
 
     /**
-     * Obtiene un numero particular de preguntas en random order.
-     * @param numPreguntas
-     * @return
-     */
-    public List<Pregunta> getPreguntasRandom(int numPreguntas) {
-        //si tiene mas preguntas que numPreguntas
-        //desordeno y saco numPreguntas
-        if (this.preguntas.size() > numPreguntas) {
-            LOG.info("Del tema {} hay {} preguntas y voy a intentar sacar {} más ", this.texto, this.getPreguntas().size(), numPreguntas);
-            Collections.shuffle(this.getPreguntas());
-            return this.getPreguntas().subList(0, numPreguntas);
-        } else {
-            Collections.shuffle(this.getPreguntas());
-            return this.getPreguntas();
-        }
-    }
-
-    /**
      * Tiene preguntas...
      * @return boolean
      */

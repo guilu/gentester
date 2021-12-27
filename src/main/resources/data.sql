@@ -1,10 +1,66 @@
+-- bloques
 Insert into BDD_FIREACADEMY.TB01_BLOQUE(ID,TEXTO) values (1,'PARTE GENERAL');
+Insert into BDD_FIREACADEMY.TB01_BLOQUE(ID,TEXTO) values (2,'PARTE EXCLUSIVA');
 
-Insert into BDD_FIREACADEMY.TB02_TEMA(ID,TEXTO,BLOQUE_ID) values (1,'Constitución Española',1);
+-- temas de bloque 1
+Insert into BDD_FIREACADEMY.TB02_TEMA(ID,TEXTO,BLOQUE_ID) values (1,'TEMA 1.1',1);
+Insert into BDD_FIREACADEMY.TB02_TEMA(ID,TEXTO,BLOQUE_ID) values (2,'TEMA 1.2',1);
 
-Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (1,'¿Qué artículo de la Constitución está dedicado a  la  irretroactividad  de las  disposiciones  desfavorables o restrictivas  de derechos individuales?',1);
+-- temas de bloque 2
+Insert into BDD_FIREACADEMY.TB02_TEMA(ID,TEXTO,BLOQUE_ID) values (3,'TEMA 2.1',2);
+Insert into BDD_FIREACADEMY.TB02_TEMA(ID,TEXTO,BLOQUE_ID) values (4,'TEMA 2.2',2);
 
-Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (1,'Artículo 9.2',false,1);
-Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (2,'Artículo 9.3',true,1);
-Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (3,'Artículo 9.4',false,1);
-Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (4,'Artículo 10',false,1);
+-- prguntas de tema 1 y 2
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (1,'Pregunta 1.1.1',1);
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (2,'Pregunta 1.1.2',1);
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (3,'Pregunta 1.2.1',2);
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (4,'Pregunta 1.2.2',2);
+
+-- preguntas de tema 3 y 4
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (5,'Pregunta 2.1.1',3);
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (6,'Pregunta 2.1.2',3);
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (7,'Pregunta 2.2.1',4);
+Insert into BDD_FIREACADEMY.TB03_PREGUNTA(ID,TEXTO,TEMA_ID) values (8,'Pregunta 2.2.2',4);
+-- ....
+
+-- respuestas de pregunta 1
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (1,'Respuesta 1.1.1.1',false,1);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (2,'Respuesta 1.1.1.2',true, 1);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (3,'Respuesta 1.1.1.3',false,1);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (4,'Respuesta 1.1.1.4',false,1);
+-- respuestas de pregunta 2
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (5,'Respuesta 1.1.2.1',false,2);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (6,'Respuesta 1.1.2.2',true, 2);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (7,'Respuesta 1.1.2.3',false,2);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (8,'Respuesta 1.1.2.4',false,2);
+
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (9,'Respuesta 1.2.1.1',false, 3);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (10,'Respuesta 1.2.1.2',true, 3);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (11,'Respuesta 1.2.1.3',false,3);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (12,'Respuesta 1.2.1.4',false,3);
+
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (13,'Respuesta 1.2.2.1',false,4);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (14,'Respuesta 1.2.2.2',true, 4);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (15,'Respuesta 1.2.2.3',false,4);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (16,'Respuesta 1.2.2.4',false,4);
+
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (17,'Respuesta 2.1.1.1',false,5);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (18,'Respuesta 2.1.1.2',true, 5);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (19,'Respuesta 2.1.1.3',false,5);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (20,'Respuesta 2.1.1.4',false,5);
+
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (25,'Respuesta 2.1.2.1',false,6);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (26,'Respuesta 2.1.2.2',true, 6);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (27,'Respuesta 2.1.2.3',false,6);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (28,'Respuesta 2.1.2.4',false,6);
+
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (29,'Respuesta 2.2.1.1',false,7);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (30,'Respuesta 2.2.1.2',true, 7);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (31,'Respuesta 2.2.1.3',false,7);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (32,'Respuesta 2.2.1.4',false,7);
+
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (33,'Respuesta 2.2.2.1',false,8);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (34,'Respuesta 2.2.2.2',true, 8);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (35,'Respuesta 2.2.2.3',false,8);
+Insert into BDD_FIREACADEMY.TB04_RESPUESTA(ID,TEXTO,CORRECTA,PREGUNTA_ID) values (36,'Respuesta 2.2.2.4',false,8);
+-- ....
