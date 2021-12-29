@@ -35,6 +35,8 @@ public class Bloque extends BaseEntity {
         return temas;
     }
 
+    public int getNumTemas() { return (this.temas != null) ? this.temas.size() : 0; }
+
     public void setTemas(List<Tema> temas) {
         this.temas = temas;
     }

@@ -23,15 +23,15 @@ public class PreguntaController {
     private final PreguntaRepository preguntaRepository;
 
     @Autowired
-    public PreguntaController(TemaRepository temaRepository, PreguntaRepository preguntaRepository){
-        this. temaRepository = temaRepository;
+    public PreguntaController(TemaRepository temaRepository, PreguntaRepository preguntaRepository) {
+        this.temaRepository = temaRepository;
         this.preguntaRepository = preguntaRepository;
     }
 
     @GetMapping("/preguntas/shuffle/{id}")
-    public ResponseEntity<Pregunta> shufflePreguntaById(@PathVariable Long id){
-        Optional<Pregunta> pregunta =  this.preguntaRepository.findById(id);
-        if(pregunta.isPresent()) {
+    public ResponseEntity<Pregunta> shufflePreguntaById(@PathVariable Long id) {
+        Optional<Pregunta> pregunta = this.preguntaRepository.findById(id);
+        if (pregunta.isPresent()) {
             shuffle(pregunta.get().getRespuestas());
             return new ResponseEntity<>(pregunta.get(), HttpStatus.OK);
         }

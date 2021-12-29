@@ -1,4 +1,5 @@
 package com.fire.academy.api.model;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -47,6 +48,10 @@ public class Pregunta extends BaseEntity {
 
     public List<Respuesta> getRespuestas() {
         return respuestas;
+    }
+
+    public int numRespuestas() {
+        return (this.respuestas != null) ? this.respuestas.size() : 0;
     }
 
     public void setRespuestas(List<Respuesta> respuestas) {
