@@ -50,7 +50,7 @@ public class Pregunta extends BaseEntity {
         return respuestas;
     }
 
-    public int numRespuestas() {
+    public int getNumRespuestas() {
         return (this.respuestas != null) ? this.respuestas.size() : 0;
     }
 
